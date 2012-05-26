@@ -97,9 +97,9 @@ void BroLCD::displayText(char text[], int line) {
 	the number to scroll
 */
 void BroLCD::scrollInt(int number) {
-	char numAsStr[6];
+	char numAsStr[7];
     String num = String(number);
-    num.toCharArray(numAsStr, 6);
+    num.toCharArray(numAsStr, 7);
 	scrollTextAtRange(numAsStr, 0, 15, _pauseTime);
 }
 
@@ -121,9 +121,9 @@ void BroLCD::scrollText(char text[]) {
 	the line to scroll the number on
 */
 void BroLCD::scrollInt(int number, int line) {
-	char numAsStr[6];
+	char numAsStr[7];
     String num = String(number);
-    num.toCharArray(numAsStr, 6);
+    num.toCharArray(numAsStr, 7);
 	scrollText(numAsStr, line);
 }
 
@@ -154,9 +154,9 @@ void BroLCD::scrollText(char text[], int line) {
 	the time delay (in milliseconds) between positions when scrolling
 */
 void BroLCD::scrollInt(int number, int line, int pauseTime) {
-	char numAsStr[6];
+	char numAsStr[7];
     String num = String(number);
-    num.toCharArray(numAsStr, 6);
+    num.toCharArray(numAsStr, 7);
 	scrollText(numAsStr, line, pauseTime);
 }
 
@@ -190,9 +190,9 @@ void BroLCD::scrollText(char text[], int line, int pauseTime) {
 	the upper boundary character position in the scroll range
 */
 void BroLCD::scrollIntAtRange(int number, int lowerPos, int upperPos) {
-	char numAsStr[6];
+	char numAsStr[7];
     String num = String(number);
-    num.toCharArray(numAsStr, 6);
+    num.toCharArray(numAsStr, 7);
 	scrollTextAtRange(numAsStr, lowerPos, upperPos, _pauseTime);
 }
 
@@ -226,9 +226,9 @@ void BroLCD::scrollTextAtRange(char text[], int lowerPos, int upperPos) {
 	the time delay (in milliseconds) between positions when scrolling
 */
 void BroLCD::scrollIntAtRange(int number, int lowerPos, int upperPos, int pauseTime) {
-	char numAsStr[6];
+	char numAsStr[7];
     String num = String(number);
-    num.toCharArray(numAsStr, 6);
+    num.toCharArray(numAsStr, 7);
 	scrollTextAtRange(numAsStr, lowerPos, upperPos, pauseTime);
 }
 
@@ -287,9 +287,9 @@ void BroLCD::scrollTextAtRange(char text[], int lowerPos, int upperPos, int paus
 	the character position where to display the number
 */
 void BroLCD::displayIntAtPos(int number, int pos) {
-	char numAsStr[6];
+	char numAsStr[7];
     String num = String(number);
-    num.toCharArray(numAsStr, 6);
+    num.toCharArray(numAsStr, 7);
     displayStrAtPos(numAsStr, pos);
 }
 
