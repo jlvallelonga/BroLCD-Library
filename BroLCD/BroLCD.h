@@ -12,24 +12,34 @@
 class BroLCD
 {
   public:
+    BroLCD();
     BroLCD(int ssPin);
-    BroLCD(int ssPin, int waitTime);
+    BroLCD(int ssPin, int pauseTime);
+    void displayInt(int number);
     void displayText(char text[]);
+    void displayInt(int number, int line);
     void displayText(char text[], int line);
+	void scrollInt(int number);
 	void scrollText(char text[]);
+	void scrollInt(int number, int line);
 	void scrollText(char text[], int line);
-	void scrollText(char text[], int line, int waitTime);
+	void scrollInt(int number, int line, int pauseTime);
+	void scrollText(char text[], int line, int pauseTime);
+	void scrollIntAtRange(int number, int lowerPos, int upperPos);
 	void scrollTextAtRange(char text[], int lowerPos, int upperPos);
-	void scrollTextAtRange(char text[], int lowerPos, int upperPos, int waitTime);
+	void scrollIntAtRange(int number, int lowerPos, int upperPos, int pauseTime);
+	void scrollTextAtRange(char text[], int lowerPos, int upperPos, int pauseTime);
+	void displayIntAtPos(int number, int pos);
 	void displayStrAtPos(char text[], int pos);
 	void displayCharAtPos(char character, int pos);
-	void setWaitTime(int waitTime);
+	void displayCharAtPos(int character, int pos);
+	void setPauseTime(int pauseTime);
 	void clearScreen();
 	void clearLine(int line);
-	void begin();
+	void initialize();
   private:
 	int _ssPin;
-	int _waitTime;
+	int _pauseTime;
 };
 
 #endif

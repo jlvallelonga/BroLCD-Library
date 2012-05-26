@@ -3,7 +3,7 @@
 BroLCD lcd(10);
 
 void setup() {
-  lcd.begin();
+  lcd.initialize();
   
 }
 
@@ -30,18 +30,18 @@ void loop() {
   lcd.clearScreen();
   delay(500);
   
-  lcd.setWaitTime(200);
+  lcd.setPauseTime(200);
   lcd.scrollText("scroll line 1");
   lcd.scrollText("scroll line 2", 2);
   lcd.displayText("really fast");
-  lcd.setWaitTime(100);
+  lcd.setPauseTime(100);
   lcd.scrollText("REALLY FAST", 2);
   lcd.displayText("really slow");
-  lcd.setWaitTime(500);
+  lcd.setPauseTime(500);
   lcd.scrollText("SLOW", 2);
   
   lcd.displayText("in subsections");
-  lcd.setWaitTime(200);
+  lcd.setPauseTime(200);
   lcd.scrollTextAtRange("hello", 16, 23);
   lcd.scrollTextAtRange("hello", 16, 23);
   lcd.scrollTextAtRange("hello", 23, 31);
